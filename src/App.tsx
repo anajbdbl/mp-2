@@ -43,7 +43,7 @@ function App() {
   useEffect(() => {
       async function fetchData(): Promise<void> {
         const res = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/search?isOnView=true&hasImages=true&q=*");
-        const { objectIDs } = await res.json();
+        const { objectIDs }: { objectIDs: number[] } = await res.json();
 
         if (objectIDs) {
           const selectedIDs = objectIDs.slice(0, numTotal);
