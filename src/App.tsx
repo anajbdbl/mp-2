@@ -37,7 +37,7 @@ const StyledInput = styled.input`
 `;
 
 function App() {
-  const [numTotal, setTotal] = useState(20);
+  const [numTotal, setTotal] = useState(50);
   const [data, setData] = useState<Painting[]>([]);
 
   useEffect(() => {
